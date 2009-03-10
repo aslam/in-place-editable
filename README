@@ -1,7 +1,14 @@
 In Place Editable
 =================
 
-Easy mode REST-ful in place editing. Currently jQuery only.
+Easy mode REST-ful in place editing. Currently jQuery only. Usage:
+
+* Install the plugin with "ruby script/plugin install git://github.com/leethal/in-place-editable.git" (or add it as a submodule if you like).
+* Run "rake in_place_editable:copy_javascripts"
+* Make sure you load the javascript in your layout. E.g. <%= javascript_include_tag "jquery", "in_place_editable", "application" %>
+* Use it in your views with <%= in_place_editable(@post, :title) %>.
+
+Similar to form for, you can pass an array. <%= in_place_editable([:admin, @project, @task], :description) %>.
 
 
 Copyright (c) 2009 August Lilleaas, released under the MIT license
